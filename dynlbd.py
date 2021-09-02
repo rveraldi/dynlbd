@@ -1,5 +1,7 @@
 #!/usr/bin/python3.9
-
+#
+# veraldi@slac.stanford.edu
+#
 import yaml
 import sys
 import os
