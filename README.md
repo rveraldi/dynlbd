@@ -9,11 +9,12 @@ The program read its configuration from a YAML configuration file /etc/dynlbd.co
 
 the configuration structure is the following:
 
-
+<pre>
 option: value
 FQDNpoolname:
    <IPaddress>:
       - module
+</pre>
 
 FQDNpoolname is a valid DNS FQDN which identifies a series of A records for that specific pool, for example:
 
