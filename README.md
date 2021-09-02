@@ -12,7 +12,7 @@ the configuration structure is the following:
 <pre>
 option: value
 FQDNpoolname:
-   <IPaddress>:
+   IPaddress:
       - module
 </pre>
 
@@ -25,11 +25,13 @@ login.mydomain.org has address 192.168.122.150
 
 we define those in the configuration file:
 
+<pre>
 login.mydomain.org:
    192.168.122.150:
        - all
    192.168.122.151:
        - all
+</pre>
 
 the program will check for the hosts in the config file to be in a healthy status.
 All the hosts are running Prometheus node_exporter and checks are made by inquiring the hosts node_Exporter directly.
@@ -39,11 +41,13 @@ The same host will be added later to the DNS record A pool whenever it will beco
 
 The available modules for health check are:
 
+<pre>
 - cpu 	// check for cpu usage
 - mem   // check for memory usage
 - load  // check for load averages
 - all   // all of the above modules
 - net   // check for network usage
+</pre>
 
 # cpu
 if the cpu usage is more than 90% the host is marked as BAD
@@ -59,30 +63,36 @@ if RX or TX bandwidthis above 80% the node is marked as BAD
 
 the net module tag needs to reference the interface name related to the probe, for example:
 
+<pre>
 login.mydomain.org:
    192.168.122.150:
        - net.enp0f0s0
+</pre>
 
 The ICMP ping module is always run by default and only if the host answers to ICMP echo queries it will be probed
 for subsequent health checks.
 
 To run just a ICMP probe do not add any module option. For example:
 
+<pre>
 login.mydomain.org:
    192.168.122.150:
    192.168.122.151:
        - all
+</pre>
 
 host 192.168.122.150 will just have a ICMP probe.
 
 IPv6 is supported, in that case for Link Local IPv6 a "%<device>" will need to be appended to the IPv6 address. For example:
 
+<pre>
 bastion.mydomain.org:
    fe80::2245:fa:febc:2008%virbr0:
        - cpu
    192.168.122.180:
        - all
-
+</pre>
+   
 ## Usage
 
 usage: dynlbd.py [-h] [-cf CONFIG_FILE] [-pm PING_METHOD]
