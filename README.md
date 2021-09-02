@@ -20,8 +20,10 @@ FQDNpoolname is a valid DNS FQDN which identifies a series of A records for that
 
 login.mydomain.org has two A records in the DNS:
 
+<pre>
 login.mydomain.org has address 192.168.122.151
 login.mydomain.org has address 192.168.122.150
+</pre>
 
 we define those in the configuration file:
 
