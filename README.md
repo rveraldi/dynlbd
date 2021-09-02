@@ -96,7 +96,7 @@ bastion.mydomain.org:
 </pre>
    
 ## Usage
-
+<pre>
 usage: dynlbd.py [-h] [-cf CONFIG_FILE] [-pm PING_METHOD]
                  [-d | -f | -k KUBELOG]
 
@@ -111,7 +111,7 @@ optional arguments:
   -f, --foreground      run in foreground, NO Daemon
   -k KUBELOG, --kubelog KUBELOG
                         log file path for kubernetes mode
-
+</pre>
 
 
 
