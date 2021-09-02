@@ -116,7 +116,7 @@ optional arguments:
 
 ## Build
 
-several python module needs to be installed with pip prior to run dynlbd.py
+several python modules need to be installed with "pip" prior to run dynlbd.py
    
 a custom module to create sysV shmem is provided as C code.
 to build the so library:
@@ -124,5 +124,6 @@ to build the so library:
 gcc -fPIC -shared -o shm.so shm.c
 </pre>
 
-
+## Testing
+dynlbd.py has been tested runnning python3.9
 
