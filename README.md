@@ -63,7 +63,7 @@ if one minute load average is greater then the number of cores on the system the
 ### net
 if RX or TX bandwidth his above 80% the node is marked as BAD
 
-the net module tag needs to reference the interface name related to the probe, for example:
+the "net" module tag needs to reference the interface name stats to be gathered on the remote host:
 
 <pre>
 login.mydomain.org:
