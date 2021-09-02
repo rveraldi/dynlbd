@@ -5,7 +5,7 @@ simple DNS load balancer written in python.
 
 ## configuration
 
-The scripts read its configuration from a YAML configuration file /etc/dynlbd.conf
+The program read its configuration from a YAML configuration file /etc/dynlbd.conf
 
 the configuration structure is the followin:
 
