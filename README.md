@@ -39,7 +39,7 @@ the program will check for the hosts in the config file to be in a healthy statu
 All the hosts are running Prometheus node_exporter and checks are made by inquiring the hosts node_Exporter directly.
 If they aren't healthy, the specific IP address belonging to the unhealthy host will be removed by the DNS using a rfc2136 query.
 
-The same host will be added later to the DNS record A pool whenever it will become healthy again
+The same host will be added later to the DNS record A pool whenever in healthy status
 
 The available modules for health check are:
 
