@@ -61,7 +61,7 @@ if the free memory percent is lower than 5% the host is marked as BAD
 if one minute load average is greater then the number of cores on the system the host is marked as BAD
 
 ### net
-if RX or TX bandwidthis above 80% the node is marked as BAD
+if RX or TX bandwidth his above 80% the node is marked as BAD
 
 the net module tag needs to reference the interface name related to the probe, for example:
 
